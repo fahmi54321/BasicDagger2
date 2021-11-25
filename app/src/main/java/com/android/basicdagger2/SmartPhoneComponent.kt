@@ -2,8 +2,8 @@ package com.android.basicdagger2
 
 import dagger.Component
 
-//todo 4 (rebuild untuk menggenered dagger dan next implementasi dagger pada main activity)
-@Component
+// todo 3 (finish next lakukan tambah module pada class lain)
+@Component(modules = [MemoryCardModule::class])
 interface SmartPhoneComponent {
 
     fun getSmartPhone(): SmartPhone

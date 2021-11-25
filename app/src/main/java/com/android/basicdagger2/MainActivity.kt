@@ -5,7 +5,6 @@ import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
 
-    //todo 1 (next memberikan inject constructor pada masing2 class)
     private lateinit var smartPhone: SmartPhone
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,8 +19,6 @@ class MainActivity : AppCompatActivity() {
 //
 //        smartPhone.makeACallWithRecording()
 
-        //with dagger
-        //todo 4 (finish)
         DaggerSmartPhoneComponent.create()
             .getSmartPhone()
             .makeACallWithRecording()
