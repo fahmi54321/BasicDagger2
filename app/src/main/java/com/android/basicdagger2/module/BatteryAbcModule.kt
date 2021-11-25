@@ -2,16 +2,16 @@ package com.android.basicdagger2.module
 
 import com.android.basicdagger2.Battery
 import com.android.basicdagger2.BatteryAbc
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 
-//todo 3 (next tambahkan module ke component dan finish)
-@Module
-class BatteryAbcModule {
+//todo 1 change to abstract class (lebih simpel, ) (finish)
 
-    @Provides
-    fun providesBaterryAbc(batteryAbc: BatteryAbc): Battery {
-        return batteryAbc
-    }
+@Module
+abstract class BatteryAbcModule {
+
+    @Binds
+    abstract fun bindBaterryAbc(batteryAbc: BatteryAbc): Battery
 
 }
