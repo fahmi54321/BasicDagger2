@@ -1,8 +1,10 @@
 package com.android.basicdagger2
 
 import android.util.Log
+import javax.inject.Inject
 
-class SmartPhone(
+//todo 3 (next membuat interface dengan anotasi @Component untuk generated dagger2)
+class SmartPhone @Inject constructor(
     val battery: Battery,
     val simCard: SIMCard,
     val memoryCard: MemoryCard
