@@ -3,7 +3,7 @@ package com.android.basicdagger2
 import android.util.Log
 import javax.inject.Inject
 
-class ServiceProvider @Inject constructor() {
+class ServiceProvider{
 
     init {
         Log.i("MYTAG","Service Provider Constructed")

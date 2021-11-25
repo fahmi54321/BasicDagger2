@@ -3,7 +3,7 @@ package com.android.basicdagger2
 import android.util.Log
 import javax.inject.Inject
 
-class SIMCard @Inject constructor(private val serviceProvider: ServiceProvider) {
+class SIMCard(private val serviceProvider: ServiceProvider) {
 
     init {
         Log.i("MYTAG","SIM Card Constructed")
