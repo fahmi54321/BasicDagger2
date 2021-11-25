@@ -1,6 +1,8 @@
 package com.android.basicdagger2
 
 import android.util.Log
+import com.android.basicdagger2.interfaces.Battery
+import com.android.basicdagger2.interfaces.MemoryCard
 import javax.inject.Inject
 
 class SmartPhone @Inject constructor(

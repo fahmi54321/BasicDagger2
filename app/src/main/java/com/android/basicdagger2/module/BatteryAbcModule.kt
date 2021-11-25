@@ -1,6 +1,6 @@
 package com.android.basicdagger2.module
 
-import com.android.basicdagger2.Battery
+import com.android.basicdagger2.interfaces.Battery
 import com.android.basicdagger2.BatteryAbc
 import dagger.Module
 import dagger.Provides

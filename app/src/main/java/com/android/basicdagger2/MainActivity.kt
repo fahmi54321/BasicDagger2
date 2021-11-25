@@ -2,6 +2,7 @@ package com.android.basicdagger2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.android.basicdagger2.component.DaggerSmartPhoneComponent
 
 class MainActivity : AppCompatActivity() {
 

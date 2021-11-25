@@ -1,14 +1,15 @@
-package com.android.basicdagger2
+package com.android.basicdagger2.component
 
+import com.android.basicdagger2.SmartPhone
 import com.android.basicdagger2.module.*
 import dagger.Component
 
 @Component(
     modules = [
-        MemoryCardModule::class,
         ServiceProviderModule::class,
         SIMCardModule::class,
-        BatteryAbcModule::class
+        BatteryAbcModule::class,
+        MemoryCardVGenModule::class
     ]
 )
 interface SmartPhoneComponent {
