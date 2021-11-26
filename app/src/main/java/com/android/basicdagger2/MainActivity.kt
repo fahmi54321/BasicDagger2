@@ -3,11 +3,11 @@ package com.android.basicdagger2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.android.basicdagger2.component.DaggerSmartPhoneComponent
+import com.android.basicdagger2.module.MemoryCardVGenModule
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
-    //todo 2
     @Inject
     lateinit var smartPhone: SmartPhone
 
@@ -16,9 +16,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        //todo 3 (finish)
-        DaggerSmartPhoneComponent.create()
+        //todo 3 finish
+        DaggerSmartPhoneComponent.builder()
+            .memoryCardVGenModule(MemoryCardVGenModule(1000))
+            .build()
             .inject(this)
-        smartPhone.makeACallWithRecording()
     }
 }
