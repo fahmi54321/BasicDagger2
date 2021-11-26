@@ -3,25 +3,22 @@ package com.android.basicdagger2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.android.basicdagger2.component.DaggerSmartPhoneComponent
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var smartPhone: SmartPhone
+    //todo 2
+    @Inject
+    lateinit var smartPhone: SmartPhone
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val smartPhone = SmartPhone(
-//            Battery(),
-//            SIMCard(ServiceProvider()),
-//            MemoryCard()
-//        )
-//
-//        smartPhone.makeACallWithRecording()
 
+        //todo 3 (finish)
         DaggerSmartPhoneComponent.create()
-            .getSmartPhone()
-            .makeACallWithRecording()
+            .inject(this)
+        smartPhone.makeACallWithRecording()
     }
 }

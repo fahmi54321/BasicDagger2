@@ -1,5 +1,6 @@
 package com.android.basicdagger2.component
 
+import com.android.basicdagger2.MainActivity
 import com.android.basicdagger2.SmartPhone
 import com.android.basicdagger2.module.*
 import dagger.Component
@@ -14,6 +15,6 @@ import dagger.Component
 )
 interface SmartPhoneComponent {
 
-    fun getSmartPhone(): SmartPhone
-
+    //todo 1 inject smartphone component ke main activity (next main activity)
+    fun inject(mainActivity : MainActivity)
 }
