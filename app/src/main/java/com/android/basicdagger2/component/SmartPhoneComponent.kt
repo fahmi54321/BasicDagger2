@@ -4,7 +4,10 @@ import com.android.basicdagger2.MainActivity
 import com.android.basicdagger2.SmartPhone
 import com.android.basicdagger2.module.*
 import dagger.Component
+import javax.inject.Singleton
 
+//todo 2 (finish)
+@Singleton
 @Component(
     modules = [
         MemoryCardVGenModule::class,
