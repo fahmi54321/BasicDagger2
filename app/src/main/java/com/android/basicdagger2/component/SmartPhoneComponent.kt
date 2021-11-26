@@ -7,7 +7,7 @@ import dagger.Component
 @Component(
     modules = [
         ServiceProviderModule::class,
-        SIMCardModule::class,
+        SIMCardIndosatModule::class,
         BatteryAbcModule::class,
         MemoryCardVGenModule::class
     ]
