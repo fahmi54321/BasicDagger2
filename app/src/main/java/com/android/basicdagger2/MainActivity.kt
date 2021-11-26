@@ -15,11 +15,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //todo 4 (next android manifest)
 
-        //todo 3 finish
-        DaggerSmartPhoneComponent.builder()
-            .memoryCardVGenModule(MemoryCardVGenModule(1000))
-            .build()
+        (application as SmartPhoneApplication)
+            .smartPhoneComponent
             .inject(this)
     }
 }
